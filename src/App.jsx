@@ -308,11 +308,12 @@ export default function App() {
   }
 
   function buildAnswersJSON() {
-    return JSON.stringify(QUESTIONS.map(q => {
+    return QUESTIONS.map((q, i) => {
       const key = answers[q.id];
       const opt = q.options.find(o => o.key === key);
-      return { question: q.text, answer: opt ? `${opt.key}. ${opt.text}` : 'Not answered' };
-    }));
+      const answer = opt ? `${opt.key}. ${opt.text}` : 'Not answered';
+      return `Q${i + 1}: ${q.text}\nA${i + 1}: ${answer}`;
+    }).join('\n\n');
   }
 
   function isFormValid() {
