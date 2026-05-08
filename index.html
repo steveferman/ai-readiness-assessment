@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Readiness & Impact Audit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Netlify Forms detection — must be in plain HTML, not rendered by React.
+         Every assessment submission is posted here as a server-side backup.
+         View submissions: Netlify dashboard → your site → Forms tab.        -->
+    <form name="assessment-backup" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="assessment-backup" />
+      <input name="firstName"  type="text"  />
+      <input name="lastName"   type="text"  />
+      <input name="email"      type="email" />
+      <input name="score"      type="text"  />
+      <input name="percentage" type="text"  />
+      <input name="category"   type="text"  />
+      <textarea name="answers"></textarea>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  .print-hidden { display: none !important; }
+  body { background: white !important; }
+  .page-break { page-break-before: always; }
+  .print-page-1, .print-page-2 { page-break-inside: avoid; }
+  h1, h2, h3, p { margin-bottom: 0.5rem !important; }
+  .print-small { font-size: 0.875rem !important; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    box-shadow: none !important;
+  }
+}
